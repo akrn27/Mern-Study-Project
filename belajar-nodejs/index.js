@@ -1,3 +1,8 @@
-const cetakNama = (nama) => `Hallo nama saya adalah ${nama}`;
+// const cetakNama = (nama) => `Hallo nama saya adalah ${nama}`;
 
-console.log(cetakNama('Dika'));
+// console.log(cetakNama('Dika'));
+
+const cetakNama = require('./coba')
+
+// console.log('Hallo Dika')
+console.log(cetakNama('Andika'));
