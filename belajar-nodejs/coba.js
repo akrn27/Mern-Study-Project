@@ -26,9 +26,12 @@ class Orang {
 // module.exports.Orang = Orang;
 
 // Type exports 2
-module.exports = {
-    cetakNama: cetakNama,
-    PI: PI,
-    mahasiswa: mahasiswa,
-    Orang: Orang,
-}
+// module.exports = {
+//     cetakNama: cetakNama,
+//     PI: PI,
+//     mahasiswa: mahasiswa,
+//     Orang: Orang,
+// }
+
+// Type exports 3 with ES6 Notation
+module.exports = { cetakNama, PI, mahasiswa, Orang }
