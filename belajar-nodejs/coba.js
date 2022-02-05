@@ -12,6 +12,23 @@ const mahasiswa = {
     }
 }
 
-module.exports.cetakNama = cetakNama;
-module.exports.PI = PI;
-module.exports.mahasiswa = mahasiswa;
+class Orang {
+    constructor() {
+        console.log('Object Orang telah dibuat!!!');
+    }
+}
+
+
+// Type exports 1
+// module.exports.cetakNama = cetakNama;
+// module.exports.PI = PI;
+// module.exports.mahasiswa = mahasiswa;
+// module.exports.Orang = Orang;
+
+// Type exports 2
+module.exports = {
+    cetakNama: cetakNama,
+    PI: PI,
+    mahasiswa: mahasiswa,
+    Orang: Orang,
+}
