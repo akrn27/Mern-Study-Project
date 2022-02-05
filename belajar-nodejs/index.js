@@ -1,8 +1,5 @@
-// const cetakNama = (nama) => `Hallo nama saya adalah ${nama}`;
+const fs = require('fs'); // core module
+const cetakNama = require('./coba') // local module
+const moment = require('moment');
 
-// console.log(cetakNama('Dika'));
-
-const cetakNama = require('./coba')
-
-// console.log('Hallo Dika')
 console.log(cetakNama('Andika'));
