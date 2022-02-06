@@ -22,3 +22,7 @@ const fs = require('fs');
 
 
 // membaca isi file (asynchronous)
+// fs.readFile('data/test.txt', 'utf-8', (err, data) => {
+//     if (err) throw err;
+//     console.log(data);
+// })
