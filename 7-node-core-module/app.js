@@ -8,3 +8,9 @@ const fs = require('fs');
 // } catch(e) {
 //     console.log(e)
 // }
+
+
+// menuliskan string ke file (asynchronous)
+fs.writeFile('data/test.txt', 'Hello World secara Asynchronous', (e) => {
+    console.log(e);
+})
