@@ -11,6 +11,14 @@ const fs = require('fs');
 
 
 // menuliskan string ke file (asynchronous)
-fs.writeFile('data/test.txt', 'Hello World secara Asynchronous', (e) => {
-    console.log(e);
-})
+// fs.writeFile('data/test.txt', 'Hello World secara Asynchronous', (e) => {
+//     console.log(e);
+// })
+
+
+// membaca isi file (synchronous)
+// const data = fs.readFileSync('data/test.txt', 'utf-8')
+// console.log(data);
+
+
+// membaca isi file (asynchronous)
