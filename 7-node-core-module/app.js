@@ -3,4 +3,8 @@
 const fs = require('fs');
 
 // menuliskan string ke file (synchronous)
-fs.writeFileSync('test.txt', 'Hello World secara synchronous!');
+// try {
+//     fs.writeFileSync('data/test.txt', 'Hello World secara synchronous!');
+// } catch(e) {
+//     console.log(e)
+// }
