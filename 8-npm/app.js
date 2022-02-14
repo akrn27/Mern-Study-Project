@@ -6,3 +6,4 @@ const chalk = require('chalk');
 // console.log(validator.isNumeric('93081238103', 'no_symbols'));
 
 console.log(chalk.green('Hell'));
+console.log(chalk.black.bgBlue('Hello World!'));
