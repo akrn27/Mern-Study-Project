@@ -7,5 +7,5 @@ const chalk = require("chalk");
 
 // console.log(chalk.green('Hello World!'));
 // console.log(chalk.italic.bgBlue.black('Hello World!'));
-const pesan = chalk`Lorem, ipsum dolor {bgBlue sit amet} consectetur {bgGreen.italic.black adipiscing} elit. Ab, rem`;
+const pesan = chalk`Lorem, ipsum doloro {bgBlue sit amet} consectetur {bgGreen.italic.black adipiscing} elit. Ab, rem`;
 console.log(pesan);
