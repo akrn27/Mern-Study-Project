@@ -45,4 +45,4 @@ rl.question("Masukkan nama anda : ", (nama) => {
 
     rl.close();
   });
-});
+})
