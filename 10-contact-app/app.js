@@ -39,7 +39,7 @@ const main = async () => {
   const email = await tulisPertanyaan('Masukkan email anda : ');
   const noHp = await tulisPertanyaan('Masukkan No HP anda : ');
 
-  const contact = { nama, email, noHP };
+  const contact = { nama, email, noHp };
   const file = fs.readFileSync("data/contacts.json", "utf8");
   const contacts = JSON.parse(file);
 
