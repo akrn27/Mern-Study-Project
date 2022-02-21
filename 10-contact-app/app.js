@@ -26,6 +26,31 @@ const pertanyaan1 = () => {
   });
 };
 
+const pertanyaan2 = () => {
+  return new Promise((resolve, reject) => {
+    rl.question('Masukkan email anda: ', (email) => {
+      resolve(email);
+    });
+  });
+};
+
+const main = async () => {
+  const nama = await pertanyaan1();
+  const email = await pertanyaan2();
+
+  const contact = { nama, email };
+  const file = fs.readFileSync("data/contacts.json", "utf8");
+  const contacts = JSON.parse(file);
+
+  contacts.push(contact);
+
+  fs.writeFileSync("data/contacts.json", JSON.stringify(contacts));
+
+  console.log("Terimakasih Sudah Menginput Data");
+
+  rl.close();
+}
+main();
 
 
 // rl.question("Masukkan nama anda : ", (nama) => {
