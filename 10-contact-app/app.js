@@ -7,4 +7,4 @@ const main = async () => {
 
   contacts.simpanContact(nama, email, noHp);
 }
-main();
+main()
