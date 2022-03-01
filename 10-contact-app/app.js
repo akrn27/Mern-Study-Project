@@ -1,10 +1,29 @@
-const contacts = require('./contacts');
+// Mengambil argument dari command line
+console.log(process.argv[2])
 
-const main = async () => {
-  const nama = await contacts.tulisPertanyaan('Masukkan nama anda : ');
-  const email = await contacts.tulisPertanyaan('Masukkan email anda : ');
-  const noHp = await contacts.tulisPertanyaan('Masukkan No HP anda : ');
 
-  contacts.simpanContact(nama, email, noHp);
-}
-main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const contacts = require('./contacts');
+
+// const main = async () => {
+//   const nama = await contacts.tulisPertanyaan('Masukkan nama anda : ');
+//   const email = await contacts.tulisPertanyaan('Masukkan email anda : ');
+//   const noHp = await contacts.tulisPertanyaan('Masukkan No HP anda : ');
+
+//   contacts.simpanContact(nama, email, noHp);
+// }
+
+// main();
