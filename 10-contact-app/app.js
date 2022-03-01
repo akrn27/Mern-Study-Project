@@ -1,9 +1,16 @@
 // Mengambil argument dari command line
-console.log(process.argv[2])
+// const command = process.argv[2];
+// if(command === 'add'){
+
+// }else if(command === 'remove') {
+
+// }else if(command === 'list') {
+
+// }
 
 
 
-
+//debug
 
 
 
