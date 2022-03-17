@@ -9,4 +9,4 @@ yargs.command(
   }
 );
 
-yargs.parse();
+yargs.parse()
