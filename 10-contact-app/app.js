@@ -16,9 +16,9 @@ yargs.command({
       type: "string",
     },
     noHP: {
-      describe: 'Nomor Handphone',
+      describe: "Nomor Handphone",
       demandOption: true,
-      type: 'string',
+      type: "string",
     },
   },
   handler(argv) {

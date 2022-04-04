@@ -31,14 +31,20 @@ const simpanContact = (nama, email, noHp) => {
   const file = fs.readFileSync("data/contacts.json", "utf8");
   const contacts = JSON.parse(file);
 
+  // cek duplikat
+  const duplikat = contacts.find((contact) => contact.nama === nama);
+  if(duplikat) {
+    console.log('Contact sudah terdaftar, gunakan nama lain!');
+    return false;
+  }
+
   contacts.push(contact);
 
   fs.writeFileSync("data/contacts.json", JSON.stringify(contacts));
 
   console.log("Terimakasih Sudah Menginput Data");
 
-  rl.close();
 };
 
 
-module.exports = {tulisPertanyaan, simpanContact};
+module.exports = { simpanContact };
