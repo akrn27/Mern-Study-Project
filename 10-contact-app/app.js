@@ -20,6 +20,14 @@ yargs.command({
       type: 'string',
     },
   },
+  handler(argv) {
+    const contact = {
+      nama: argv.nama,
+      email: argv.email,
+      noHP: argv.noHP,
+    };
+    console.log(contact);
+  },
 });
 
 yargs.parse();
