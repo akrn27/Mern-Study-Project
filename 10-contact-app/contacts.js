@@ -1,4 +1,5 @@
 const fs = require("fs");
+const chalk = require('chalk');
 
 // membuat folder data jika belum ada
 const dirPath = "./data";
@@ -20,7 +21,7 @@ const simpanContact = (nama, email, noHp) => {
   // cek duplikat
   const duplikat = contacts.find((contact) => contact.nama === nama);
   if(duplikat) {
-    console.log('Contact sudah terdaftar, gunakan nama lain!');
+    console.log(chalk.red.inverse.bold('Contact sudah terdaftar, gunakan nama lain!'));
     return false;
   }
 
