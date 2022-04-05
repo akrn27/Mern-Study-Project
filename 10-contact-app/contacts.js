@@ -14,10 +14,17 @@ if (!fs.existsSync(dataPath)) {
   fs.writeFileSync(dataPath, "[]", "utf-8");
 }
 
+const loadContact = () => {
+  const fileBuffer = fs.readFileSync("data/contacts.json", "utf8");
+  const contacts = JSON.parse(fileBuffer);
+  return contacts;
+}
+
 const simpanContact = (nama, email, noHP) => {
   const contact = { nama, email, noHP };
-  const file = fs.readFileSync("data/contacts.json", "utf8");
-  const contacts = JSON.parse(file);
+  // const fileBuffer = fs.readFileSync("data/contacts.json", "utf8");
+  // const contacts = JSON.parse(fileBuffer);
+  const contacts = loadContact();
 
   // cek duplikat
   const duplikat = contacts.find((contact) => contact.nama === nama);
@@ -49,4 +56,9 @@ const simpanContact = (nama, email, noHP) => {
 };
 
 
-module.exports = { simpanContact };
+const listContact = () => {
+
+}
+
+
+module.exports = { simpanContact, listContact };
