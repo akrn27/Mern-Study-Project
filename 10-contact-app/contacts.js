@@ -57,7 +57,11 @@ const simpanContact = (nama, email, noHP) => {
 
 
 const listContact = () => {
-
+  const contacts = loadContact();
+  console.log(chalk.cyan.inverse.bold('Daftar Kontak : '));
+  contacts.forEach((contact, i) => {
+    console.log(`${i + 1}. ${contact.nama} - ${contact.noHP}`);
+  })
 }
 
 
