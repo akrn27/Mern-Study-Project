@@ -92,6 +92,10 @@ const deleteContact = (nama) => {
     console.log(chalk.red.inverse.bold(`${nama} tidak ditemukan!`));
     return false;
   }
+
+  fs.writeFileSync("data/contacts.json", JSON.stringify(newContacts));
+
+  console.log(chalk.green.inverse.bold(`data contact ${nama} berhasil dihapus!`));
 };
 
 
