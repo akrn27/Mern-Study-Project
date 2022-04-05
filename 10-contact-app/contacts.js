@@ -82,4 +82,17 @@ const detailContact = (nama) => {
 };
 
 
-module.exports = { simpanContact, listContact, detailContact };
+const deleteContact = (nama) => {
+  const contacts = loadContact();
+  const newContacts = contacts.filter(
+    (contact) => contact.nama.toLowerCase() !== nama.toLowerCase()
+  );
+
+  if(contacts.length === newContacts.length) {
+    console.log(chalk.red.inverse.bold(`${nama} tidak ditemukan!`));
+    return false;
+  }
+};
+
+
+module.exports = { simpanContact, listContact, detailContact, deleteContact };
