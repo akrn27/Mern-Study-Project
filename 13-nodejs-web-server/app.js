@@ -10,8 +10,15 @@ http
 
         const url = req.url;
         if(url === '/about'){
-            res.write('<h1>Ini adalah halaman About</h1>');
-            res.end();
+            fs.readFile('./about.html', (err, data) => {
+                if(err) {
+                    res.writeHead(404);
+                    res.write('Error: file not found');
+                } else {
+                    res.write(data);
+                }
+                res.end();
+            });
         } else if(url === '/contact'){
             res.write('<h1>Ini adalah halaman Contact</h1>');
             res.end();
