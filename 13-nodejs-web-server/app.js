@@ -29,7 +29,7 @@ http
                 renderHTML('./about.html', res);
                 break;
             case '/contact':
-                res.write('<h1>Ini adalah halaman Contact</h1>');
+                renderHTML('./contact.html', res);
                 break;
             default:
                 renderHTML('./index.html', res);
