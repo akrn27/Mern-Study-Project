@@ -15,11 +15,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.send('Ini adalah Halaman About')
+    // res.send('Ini adalah Halaman About')
+    res.sendFile('./about.html', { root: __dirname});
   })
 
 app.get('/contact', (req, res) => {
-    res.send('Ini adalah Halaman Contact')
+    // res.send('Ini adalah Halaman Contact')
+    res.sendFile('./contact.html', { root: __dirname});
 })
 
 app.use('/', (req, res) => {
