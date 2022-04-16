@@ -31,11 +31,17 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: 'Halaman About'});
+  res.render("about", { 
+    layout: 'layouts/main-layout',
+    title: 'Halaman About'
+  });
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact", { title: 'Halaman Contact'});
+  res.render("contact", { 
+    layout: 'layouts/main-layout',
+    title: 'Halaman Contact'
+  });
 });
 
 app.get("/product/:id", (req, res) => {
