@@ -26,7 +26,8 @@ app.get("/", (req, res) => {
   res.render("index", { 
     nama: "Muhammad Andika", 
     title: "Halaman Home",
-     mahasiswa,
+    mahasiswa,
+    layout: 'layouts/main-layout',
   });
 });
 
