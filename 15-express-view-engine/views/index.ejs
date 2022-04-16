@@ -23,9 +23,12 @@
             flex-direction: column;
         }
 
+        ul.navbar {
+            list-style: none;
+        }
+
         ul {
             display: flex;
-            list-style: none;
         }
         
         ul li {
@@ -36,7 +39,7 @@
 <body>
     <div class="container">
         <h3>Links</h3>
-        <ul>
+        <ul class="navbar">
             <li>
                 <a href="/">Home</a>
             </li>
@@ -52,6 +55,18 @@
         </ul>
         <h1>Web Server NodeJS</h1>
         <h2>Halo <%= nama %></h2>
+
+        <h4>Daftar Mahasiswa</h4>
+        <% if (mahasiswa.length < 1) { %>
+         <p>Data masing kosong</p>
+        <% } else { %>
+        <% mahasiswa.forEach(mhs => { %>
+         <ul>
+             <li>Nama : <%= mhs.nama %></li>
+             <li>Email : <%= mhs.email %></li>
+         </ul>
+        <% }) %>
+        <% } %>
     </div>
 </body>
 </html>
