@@ -6,7 +6,7 @@ const port = 3000
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {nama: 'Muhammad Andika', title: 'Halaman Home'});
 });
 
 app.get('/about', (req, res) => {
