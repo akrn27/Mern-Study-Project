@@ -3,6 +3,9 @@ const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const port = 3000;
 
+// Built-in middleware
+app.use(express.static('public'));
+
 // gunakan ejs
 app.set("view engine", "ejs");
 app.use(expressLayouts);
