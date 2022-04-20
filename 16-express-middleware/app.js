@@ -44,6 +44,11 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.use((req, res, next) => {
+  console.log('ini middleware ke-2');
+  next();
+})
+
 app.get("/contact", (req, res) => {
   res.render("contact", { 
     layout: 'layouts/main-layout',
