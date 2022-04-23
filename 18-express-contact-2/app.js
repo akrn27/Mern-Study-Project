@@ -14,6 +14,9 @@ app.use(expressLayouts);
 // Built-in middleware
 app.use(express.static('public'));
 
+// Built-in middleware to encode url
+app.use(express.urlencoded());
+
 app.get("/", (req, res) => {
   const mahasiswa = [
     {
@@ -62,6 +65,12 @@ app.get('/contact/add', (req,res) => {
     layout: 'layouts/main-layout',
   })
 });
+
+// proses data contact
+app.post('/contact', (req, res) => {
+  addContact(req.body);
+  res.redirect('/contact');
+})
 
 // halaman detail contact
 app.get("/contact/:nama", (req, res) => {

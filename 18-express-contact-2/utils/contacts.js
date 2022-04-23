@@ -26,4 +26,7 @@ const findContact = (nama) => {
     return contact;
 }
 
+// menuliskan / menimpa file contacts.json dengan data yang baru
+
+
 module.exports = { loadContact, findContact };
