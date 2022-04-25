@@ -2,6 +2,9 @@ const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const { loadContact, findContact, addContact, cekDuplikat } = require("./utils/contacts");
 const { body, validationResult, check } = require("express-validator");
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const flash = require('connect-flash');
 
 const app = express();
 const port = 3000;
@@ -17,6 +20,18 @@ app.use(express.static("public"));
 
 // Built-in middleware to encode url
 app.use(express.urlencoded({ extended: true }));
+
+// konfigurasi flash
+app.use(cookieParser('secret'));
+app.use(
+  session({
+    cookie: {maxAge: 6000 },
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true,
+  })
+)
+app.use(flash());
 
 app.get("/", (req, res) => {
   const mahasiswa = [
