@@ -90,9 +90,10 @@ app.post(
         layout: 'layouts/main-layout',
         errors: errors.array(),
       })
+    } else {
+      addContact(req.body);
+      res.redirect('/contact');
     }
-    // addContact(req.body);
-    // res.redirect('/contact');
   }
 );
 
