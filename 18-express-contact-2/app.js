@@ -1,6 +1,6 @@
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
-const { loadContact, findContact, addContact } = require("./utils/contacts");
+const { loadContact, findContact, addContact, cekDuplikat } = require("./utils/contacts");
 const { body, validationResult, check } = require("express-validator");
 
 const app = express();
@@ -84,7 +84,12 @@ app.post(
   (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      // return res.status(400).json({ errors: errors.array() });
+      res.render('add-contact', {
+        title: 'Form Tambah Data Contact',
+        layout: 'layouts/main-layout',
+        errors: errors.array(),
+      })
     }
     // addContact(req.body);
     // res.redirect('/contact');
