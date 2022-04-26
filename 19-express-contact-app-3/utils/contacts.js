@@ -61,4 +61,5 @@ const updateContacts = (contactBaru) => {
   saveContacts(filteredContacts);
 }
 
+// exports
 module.exports = { loadContact, findContact, addContact, cekDuplikat, deleteContact, updateContacts };
