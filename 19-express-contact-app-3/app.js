@@ -132,9 +132,12 @@ app.get('/contact/delete/:nama', (req, res) => {
 
 // Halaman form ubah data contact
 app.get('/contact/edit/:nama', (req, res) => {
+  const contact = findContact(req.params.nama);
+
   res.render('edit-contact', {
     title: 'Form Ubah Data Contact',
-    layout: 'layout/main-layout'
+    layout: 'layouts/main-layout',
+    contact,
   });
 });
 
