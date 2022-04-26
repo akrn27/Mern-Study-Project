@@ -115,6 +115,19 @@ app.post(
   }
 );
 
+// Proses delete contact
+app.get('/contact/delete/:nama', (req, res) => {
+  const contact = findContact(req.params.nama);
+
+  // jika contact tidak ada
+  if(!contact) {
+    res.status(404);
+    res.send('<h1>404</h1>');
+  } else {
+    deleteContact(req.params.nama);
+  }
+})
+
 // halaman detail contact
 app.get("/contact/:nama", (req, res) => {
   const contact = findContact(req.params.nama);
