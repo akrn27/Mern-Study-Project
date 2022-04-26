@@ -71,6 +71,7 @@ app.get("/contact", (req, res) => {
     title: "Halaman Contact",
     layout: "layouts/main-layout",
     contacts,
+    msg: req.flash('msg'),
   });
 });
 
@@ -107,6 +108,8 @@ app.post(
       })
     } else {
       addContact(req.body);
+      // kirimkan flash message
+      req.flash('msg', 'Data contact berhasil ditambahkan!');
       res.redirect('/contact');
     }
   }
