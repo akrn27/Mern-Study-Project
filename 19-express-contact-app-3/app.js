@@ -141,6 +141,11 @@ app.get('/contact/edit/:nama', (req, res) => {
   });
 });
 
+// proses ubah data
+app.post('/contact/update', (req, res) => {
+  res.send(req.body);
+})
+
 // halaman detail contact
 app.get("/contact/:nama", (req, res) => {
   const contact = findContact(req.params.nama);
