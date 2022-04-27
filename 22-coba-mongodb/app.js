@@ -1,3 +1,4 @@
+const { ObjectID } = require('bson');
 const { MongoClient } = require('mongodb');
 
 const uri = 'mongodb://127.0.0.1:27017';
@@ -52,9 +53,15 @@ client.connect((error, client) => {
     //     }
     // )
 
-    // Menampilkan semua data yang ada di collection 'mahasiswa'
-    console.log(db.collection('mahasiswa').find().toArray((error, result) => {
-        console.log(result);
-    }));
+    // // Menampilkan semua data yang ada di collection 'mahasiswa'
+    // console.log(db.collection('mahasiswa').find().toArray((error, result) => {
+    //     console.log(result);
+    // }));
 
+    // Menampilkan data berdasarkan kriteria yang ada di collection 'mahasiswa'
+    // console.log(db.collection('mahasiswa').find({ _id: ObjectID('62693aa5321b9e9c9a7913a9')}).toArray((error, result) => {
+    //     console.log(result);
+    // }));
+
+    // Mengubah data berdasarkan id
 })
