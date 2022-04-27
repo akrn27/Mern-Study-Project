@@ -32,25 +32,29 @@ client.connect((error, client) => {
     // )
 
     // Menambahkan lebih dari 1 data
-    db.collection('mahasiswa').insertMany(
-        [
-            {
-                nama: 'Erik',
-                email: 'erik@yahoo.com'
-            },
-            {
-                nama: 'Avip',
-                email: 'avip@gmail.com'
-            }
-        ],
-        (error, result) => {
-            if(error) {
-                return console.log('data gagal ditambahkan!');
-            }
+    // db.collection('mahasiswa').insertMany(
+    //     [
+    //         {
+    //             nama: 'Erik',
+    //             email: 'erik@yahoo.com'
+    //         },
+    //         {
+    //             nama: 'Avip',
+    //             email: 'avip@gmail.com'
+    //         }
+    //     ],
+    //     (error, result) => {
+    //         if(error) {
+    //             return console.log('data gagal ditambahkan!');
+    //         }
 
-            console.log(result);
-        }
-    )
+    //         console.log(result);
+    //     }
+    // )
 
+    // Menampilkan semua data yang ada di collection 'mahasiswa'
+    console.log(db.collection('mahasiswa').find().toArray((error, result) => {
+        console.log(result);
+    }));
 
 })
