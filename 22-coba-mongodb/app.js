@@ -64,4 +64,23 @@ client.connect((error, client) => {
     // }));
 
     // Mengubah data berdasarkan id
+    // const updatePromise = db.collection('mahasiswa').updateOne(
+    //     {
+    //         _id: ObjectID('62693aa5321b9e9c9a7913a9'),
+    //     },
+    //     {
+    //         $set: {
+    //             email: 'avip@yahoo.com',
+    //         }
+    //     }
+    // );
+
+    // updatePromise.then((result) => {
+    //     console.log(result);
+    // }).catch((error) => {
+    //     console.log(error);
+    // })
+
+    // Mengubah data lebih dari 1, berdasarkan kriteria
+    
 })
