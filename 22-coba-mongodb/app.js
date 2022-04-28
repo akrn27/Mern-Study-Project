@@ -82,5 +82,35 @@ client.connect((error, client) => {
     // })
 
     // Mengubah data lebih dari 1, berdasarkan kriteria
-    
+    // db.collection('mahasiswa').updateMany(
+    //     {
+    //         nama: 'Erik',
+    //     },
+    //     {
+    //         $set: {
+    //             nama: 'Erik Doank',
+    //         },
+    //     }
+    // )
+
+    // Menghapus 1 data
+    // db.collection('mahasiswa').deleteOne({
+    //     _id: ObjectID('62693aa5321b9e9c9a7913a9'),
+    // }).then((result) => {
+    //     console.log(result);
+    // }).catch((error) => {
+    //     console.log(error);
+    // })
+
+    // Menghapus lebih dari 1 data
+    db.collection('mahasiswa').deleteMany(
+        {
+            nama: 'Erik Doank',
+        })
+        .then((result) => {
+            console.log(result)
+        })
+        .catch((error) => {
+            console.log(error);
+        })
 })
