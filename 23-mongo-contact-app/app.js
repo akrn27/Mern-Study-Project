@@ -36,6 +36,14 @@ app.get("/", (req, res) => {
     console.log('ini halaman home');
   });
 
+  // Halaman About
+  app.get("/about", (req, res) => {
+    res.render("about", {
+      title: "Halaman About",
+      layout: "layouts/main-layout",
+    });
+  });
+
 app.listen(port, () => {
     console.log(`Mongo Contact App | listening at http://localhost:${port}`);
 })
