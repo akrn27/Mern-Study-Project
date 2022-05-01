@@ -1,6 +1,9 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 
+require('./utils/db');
+const Contact = require('./model/contact');
+
 const app = express();
 const port = 3000;
 
@@ -45,8 +48,12 @@ app.get("/", (req, res) => {
   });
 
   // Halaman Contact
-  app.get("/contact", (req, res) => {
-    const contacts = loadContact();
+  app.get("/contact", async (req, res) => {
+    // Contact.find().then((contact) => {
+    //   res.send(contact);
+    // })
+
+    const contacts = await Contact.find();
   
     res.render("contact", {
       title: "Halaman Contact",
