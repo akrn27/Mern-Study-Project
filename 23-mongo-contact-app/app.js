@@ -44,6 +44,18 @@ app.get("/", (req, res) => {
     });
   });
 
+  // Halaman Contact
+  app.get("/contact", (req, res) => {
+    const contacts = loadContact();
+  
+    res.render("contact", {
+      title: "Halaman Contact",
+      layout: "layouts/main-layout",
+      contacts,
+      msg: req.flash('msg'),
+    });
+  });
+
 app.listen(port, () => {
     console.log(`Mongo Contact App | listening at http://localhost:${port}`);
 })
